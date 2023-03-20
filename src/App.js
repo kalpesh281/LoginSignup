@@ -12,7 +12,7 @@ import UserDetail from "./Components/UserDetail";
 
 function App() {
 
-  const isLoggedIn=window.localStorage.getItem("loggedIn");
+  // const isLoggedIn=window.localStorage.getItem("loggedIn");
   
   return (
    <>
@@ -21,7 +21,8 @@ function App() {
         <div className="auth-wrapper">
           <div className="auth-inner">
             <Routes>
-              <Route exact path="/" element={isLoggedIn==="true"?<UserDetail/>:<Login/> } />
+              {/* <Route exact path="/" element={isLoggedIn==="true"?<UserDetail/>:<Login/> } /> */}
+              <Route exact path="/" element={<Signup/>} /> 
               <Route exact path="/sign-in" element={<Login/>} />
               <Route exact path="/sign-up" element={<Signup/>} />
               <Route exact path="/userDetail" element={<UserDetail/>} />
