@@ -13,6 +13,8 @@ class Login extends Component {
             password: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        window.localStorage.setItem("token","");
+
     }
 
     handleSubmit(e) {
